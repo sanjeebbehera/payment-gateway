@@ -22,6 +22,7 @@ public class AmazonServiceImpl implements IAmazonService{
 
 	@Override
 	public AmazonOrder saveOrder(AmazonOrder order) throws Exception {
+		System.out.println("RazorpayClient class take only json file ....");
 		JSONObject json=new JSONObject();
 		json.put("amount", order.getAmount()*100);//convert into paisa (1 rupee = 100 paisa)
 		json.put("currency", "INR"); //Indian Rupees
