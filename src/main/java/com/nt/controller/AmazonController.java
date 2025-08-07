@@ -29,7 +29,6 @@ public class AmazonController {
 	@PostMapping(value="/save",produces = "application/JSON")
 	@ResponseBody
 	public ResponseEntity<AmazonOrder> saveOrder(@RequestBody AmazonOrder order) throws Exception{
-		System.out.println("Change to check pull comment");
 		return new ResponseEntity<AmazonOrder>(service.saveOrder(order),HttpStatus.CREATED);
 	}
 	
@@ -40,4 +39,3 @@ public class AmazonController {
 	}
 
 }
-
